@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class MyApp {
 	
 	public static void main (String args[]) {
-		new MyApp().LongestWord();
+		thePrinter();
 		System.exit(0);	
 
 	}
@@ -27,9 +27,9 @@ public class MyApp {
 	/** Method that splits sentences to smaller words 
 	 *	finds the longest word and prints it out. 
 	 */	 
-	public void LongestWord() {
+	public ArrayList<String> LongestWord(ArrayList<String> str) {
 		
-		ArrayList<String> str = mySentences();; 
+		ArrayList<String> resultOut = new ArrayList<String>();; 
 		
 		for (String sentence: str) {
 			String[] words = sentence.split("\\s*[^a-zA-Z]+\\s*");
@@ -46,9 +46,18 @@ public class MyApp {
 				
 			}
 			String printOut = "In the sentence \"" + sentence +"\" -----> Longest word: \"" + longestWord + "\" and length: " + longestStringLength + ".";
-			System.out.println(printOut);			
-		}
+			resultOut.add(printOut);			
+		}		
+		return resultOut;
 	}
 	
+	public static void thePrinter () {
+		ArrayList<String> results = new MyApp().LongestWord(mySentences());
+
+		for (String result: results) {
+			System.out.println(result.toString());
+		}
+
+	}	
 	
 }
