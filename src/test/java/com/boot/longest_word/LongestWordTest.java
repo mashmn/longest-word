@@ -26,7 +26,7 @@ public class LongestWordTest {
 	}
 	
 	/**
-	 * 
+	 * Test case - to test sentence with unicode, alphanumeric and other non alphabets.
 	 */
    @Test
    public void LongestWordMethodTest() {

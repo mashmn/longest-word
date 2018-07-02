@@ -3,7 +3,7 @@ package com.boot.longest_word;
 import junit.framework.*;
 
 /**
- * Unit test to check if junit is setup
+ * Unit test to check if JUnit is setup
  */
 public class AppTest extends TestCase
 {

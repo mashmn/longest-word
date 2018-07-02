@@ -19,6 +19,10 @@ public class FailTest {
 		return words;
 	}
 	
+	/**
+	 * Negative test case - This test case will fail as MyApp does not 
+	 * recognize sentence containing multiple words with same longest length.
+	 */
    @Test
    public void LongestWordFailTest() {
 	   MyApp app = new MyApp();
