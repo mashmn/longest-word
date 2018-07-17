@@ -1,7 +1,7 @@
 package com.boot.longest_word;
 
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import java.util.ArrayList;
 
@@ -20,14 +20,13 @@ public class FailTest {
 	}
 	
 	/**
-	 * Negative test case - This test case will fail as MyApp does not 
+	 * Negative test case - MyApp does not 
 	 * recognize sentence containing multiple words with same longest length.
 	 */
    @Test
    public void LongestWordFailTest() {
-	   MyApp app = new MyApp();
-
-       assertEquals(app.LongestWord(myFakeSentences()),expectedOutput());
+	   LongestWordApp app = new LongestWordApp();
+       assertNotEquals(app.longestWord(myFakeSentences()),expectedOutput());
    }
    
 }

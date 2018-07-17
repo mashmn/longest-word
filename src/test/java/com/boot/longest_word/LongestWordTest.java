@@ -30,9 +30,9 @@ public class LongestWordTest {
 	 */
    @Test
    public void LongestWordMethodTest() {
-	   MyApp app = new MyApp();
+	   LongestWordApp app = new LongestWordApp();
 
-       assertEquals(app.LongestWord(myFakeSentences()),expectedOutput());
+       assertEquals(app.longestWord(myFakeSentences()),expectedOutput());
    }
    
 }

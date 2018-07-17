@@ -1,13 +1,14 @@
 package com.boot.longest_word;
 
 import java.util.ArrayList;
+import java.util.List;
 /**
  * Application which finds the longest words and its length!
  * Author: Mahesh Nair
  * GitHub: https://github.com/mashmn/
  */
 
-public class MyApp {
+public class LongestWordApp {
 	
 	public static void main (String args[]) {
 		thePrinter();
@@ -16,8 +17,8 @@ public class MyApp {
 	}
 	
 	// ArrayList with variety of sentences
-	public static ArrayList<String> mySentences() {
-		ArrayList<String> mySentence = new ArrayList<String>();
+	public static List<String> mySentences() {
+		List<String> mySentence = new ArrayList<>();
 		mySentence.add("Hi");
 		mySentence.add("1234 is not a word!");
 		mySentence.add("this words is a mistake jelly123bean.");
@@ -27,11 +28,11 @@ public class MyApp {
 	/** Method that splits sentences to smaller words 
 	 *	finds the longest word and prints it out. 
 	 */	 
-	public ArrayList<String> LongestWord(ArrayList<String> str) {
+	public List<String> longestWord(List<String> sentences) {
 		
-		ArrayList<String> resultOut = new ArrayList<String>();; 
+		List<String> resultOut = new ArrayList<>();
 		
-		for (String sentence: str) {
+		for (String sentence: sentences) {
 			String[] words = sentence.split("\\s*[^a-zA-Z]+\\s*");
 			
 			int longestStringLength = 0;
@@ -52,7 +53,7 @@ public class MyApp {
 	}
 	
 	public static void thePrinter () {
-		ArrayList<String> results = new MyApp().LongestWord(mySentences());
+		List<String> results = new LongestWordApp().longestWord(mySentences());
 
 		for (String result: results) {
 			System.out.println(result.toString());
